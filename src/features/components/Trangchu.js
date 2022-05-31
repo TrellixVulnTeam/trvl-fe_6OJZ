@@ -9,8 +9,8 @@ import Ykienkhachhang from "../container/trangchu/ykienkhachhang/ykienkhachhang"
 import Dichvu from "../container/trangchu/dichvu/Dichvu";
 import Footer from "../container/trangchu/footer/Footer";
 import CreateTour from "../container/trangchu/createTour/CreateTour";
+import Ticket from "../container/Tickets/Ticket";
 export class Trangchu extends Component {
-
   render() {
     return (
       <div>

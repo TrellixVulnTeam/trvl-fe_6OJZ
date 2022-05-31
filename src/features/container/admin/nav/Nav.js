@@ -439,7 +439,7 @@ export default function Nav() {
   );
   const menu_quanlyadmin = (
     <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-      {/* <Menu.Item
+      <Menu.Item
         key="1"
         icon={
           state.collapsed === true ? (
@@ -450,7 +450,7 @@ export default function Nav() {
         }
       >
         <Link to="/admin">Doanh thu</Link>
-      </Menu.Item> */}
+      </Menu.Item>
       {/* <Menu.Item
         key="19"
         icon={

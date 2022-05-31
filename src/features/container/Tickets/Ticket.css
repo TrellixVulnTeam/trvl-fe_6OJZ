@@ -1,0 +1,17 @@
+.form-search{
+
+}
+
+.choose-destination{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 40px;
+    background: #fdd7a6;
+
+}
+
+.choose{
+    width: 320px;
+    margin-right: 20px;
+}

@@ -384,18 +384,17 @@ function ListMenu(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
+              <Linkrt
                 className="nav-link"
                 activeClass="active"
                 to="/ticket"
-                // target="_blank"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
               >
-                Vé máy bay
-              </Link>
+               Vé máy bay
+              </Linkrt>
             </li>
             <li className="nav-item mr-3">
               <Dropdown overlay={ss} trigger={["click"]}>

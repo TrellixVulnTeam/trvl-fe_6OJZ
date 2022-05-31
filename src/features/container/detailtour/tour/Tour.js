@@ -1,3 +1,4 @@
+
 import { Carousel, message, Popover, Radio, Rate, Spin } from "antd";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -500,7 +501,7 @@ function Tour(props) {
                             <span>Nơi khởi hành:</span>
                           </td>
                           <td>
-                            <span>Vinh</span>
+                            <span>Hà Nội</span>
                           </td>
                         </tr>
                       </table>
@@ -518,7 +519,7 @@ function Tour(props) {
                         <strong className="text-danger">
                           {checkKhuyenmai().toLocaleString()}
                         </strong>{" "}
-                        vnd
+                        vnđ
                       </span>
                       <br />
                       <span>Số chỗ còn lại: {songuoiconlai(ok.songuoi)}</span>
