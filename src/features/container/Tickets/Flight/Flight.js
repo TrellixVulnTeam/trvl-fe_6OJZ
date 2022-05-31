@@ -5,7 +5,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import "./Flight.css";
-
+import { addthanhtoan } from "../../detailtour/tour/thanhtoanSlice";
 import { useState } from "react";
 import { Modal, Button, Table, Space } from "antd";
 import ModalFlight from "./ModalFlight";
@@ -69,68 +69,69 @@ const dataSource = [
   },
 ];
 
-const columns = [
-  {
-    title: "",
-    dataIndex: "logo",
-    key: "logo",
-    with: "8%",
-  },
-  {
-    title: "Brand",
-    dataIndex: "brand",
-    key: "brand",
-    width: "20%",
-    filters: [
-      {
-        text: "VietNam Airline",
-        value: "VietNam Airline",
-      },
-      {
-        text: "BamBoo",
-        value: "BamBoo",
-      },
-      {
-        text: "JetStar",
-        value: "JetStar",
-      },
-      {
-        text: "VietJet",
-        value: "VietJet",
-      },
-    ],
-    onFilter: (value, record) => record.brand.indexOf(value) === 0,
-  },
-  {
-    title: "Chuyến bay",
-    dataIndex: "flight",
-    key: "flight",
-  },
-  {
-    title: "Thời gian",
-    dataIndex: "time",
-    key: "time",
-  },
-  {
-    title: "Giá",
-    dataIndex: "price",
-    key: "price",
-    sorter: (a, b) => a.price - b.price,
-  },
-  {
-    title: "",
-    key: "action",
-    render: () => (
-      <Button
-        // onClick={showModal}
-      >
-        Đặt vé
-      </Button>
-    ),
-  },
-];
+
 
 function Flight() {
+  const columns = [
+    {
+      title: "",
+      dataIndex: "logo",
+      key: "logo",
+      with: "8%",
+    },
+    {
+      title: "Brand",
+      dataIndex: "brand",
+      key: "brand",
+      width: "20%",
+      filters: [
+        {
+          text: "VietNam Airline",
+          value: "VietNam Airline",
+        },
+        {
+          text: "BamBoo",
+          value: "BamBoo",
+        },
+        {
+          text: "JetStar",
+          value: "JetStar",
+        },
+        {
+          text: "VietJet",
+          value: "VietJet",
+        },
+      ],
+      onFilter: (value, record) => record.brand.indexOf(value) === 0,
+    },
+    {
+      title: "Chuyến bay",
+      dataIndex: "flight",
+      key: "flight",
+    },
+    {
+      title: "Thời gian",
+      dataIndex: "time",
+      key: "time",
+    },
+    {
+      title: "Giá",
+      dataIndex: "price",
+      key: "price",
+      sorter: (a, b) => a.price - b.price,
+    },
+    {
+      title: "",
+      key: "action",
+      render: () => (
+        <Button
+        onClick={showModal}
+        >
+          Đặt vé
+        </Button>
+      ),
+    },
+  ];
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -148,10 +149,9 @@ function Flight() {
     <div className="wrapper">
       <h5>Kết quả tìm kiếm</h5>
       <Table columns={columns} dataSource={dataSource} />
-     
       {isModalVisible && (
         <ModalFlight
-          isModalVisible={showModal}
+          isModalVisible={isModalVisible}
           onOk={handleOk}
           onCancel={handleCancel}
         />
