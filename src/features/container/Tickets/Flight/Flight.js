@@ -148,7 +148,7 @@ function Flight() {
     <div className="wrapper">
       <h5>Kết quả tìm kiếm</h5>
       <Table columns={columns} dataSource={dataSource} />
-      <Button onClick={showModal}>Click</Button>
+     
       {isModalVisible && (
         <ModalFlight
           isModalVisible={showModal}
