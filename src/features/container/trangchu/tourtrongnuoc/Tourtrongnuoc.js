@@ -70,9 +70,7 @@ function Tourtrongnuoc(props) {
         <span>du lịch trong nước</span>
         <div className="hr"></div>
         <p className="mb-4">
-          Du lịch trong nước luôn là lựa chọn tuyệt vời. Những thành phố nhộn
-          nhịp, nền văn hóa độc đáo và hấp dẫn.
-      </p>
+          Du lịch trong nước luôn là lựa chọn tuyệt vời. Hãy đến với chúng tôi để được hưởng những ưu đãi tốt nhất</p>
       </div>
       <div className="container">
         <div className="row justify-content-center">

@@ -12,6 +12,11 @@
   font-size: 1rem;
   letter-spacing: 0.1rem;
 }
+
+#menu nav li{
+  margin-right: 10px;
+  text-transform: uppercase;
+}
 #menu .nav-link.active {
   color: #0abf54 !important;
   font-weight: 700;

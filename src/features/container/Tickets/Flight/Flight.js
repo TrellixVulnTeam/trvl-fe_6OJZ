@@ -69,8 +69,6 @@ const dataSource = [
   },
 ];
 
-
-
 function Flight() {
   const columns = [
     {
@@ -125,7 +123,9 @@ function Flight() {
       key: "action",
       render: () => (
         <Button
-        onClick={showModal}
+          onClick={() => {
+            setIsModalVisible(true);
+          }}
         >
           Đặt vé
         </Button>
@@ -146,17 +146,24 @@ function Flight() {
     setIsModalVisible(false);
   };
   return (
-    <div className="wrapper">
-      <h5>Kết quả tìm kiếm</h5>
-      <Table columns={columns} dataSource={dataSource} />
+    <>
+      <div className="wrapper">
+        <h5>Kết quả tìm kiếm</h5>
+        <Table columns={columns} dataSource={dataSource} />
+      </div>
+
       {isModalVisible && (
         <ModalFlight
           isModalVisible={isModalVisible}
-          onOk={handleOk}
-          onCancel={handleCancel}
+          handleOk={() => {
+            setIsModalVisible(false);
+          }}
+          handleCancel={() => {
+            setIsModalVisible(false);
+          }}
         />
       )}
-    </div>
+    </>
   );
 }
 

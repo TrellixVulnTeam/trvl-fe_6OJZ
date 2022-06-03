@@ -95,21 +95,7 @@ function Dangky(props) {
                         </div>
                         <Button type="submit" variant="contained" color="primary" className="w-100 mb-4">Đăng ký</Button>
                     </form>
-                    <p className="or">OR</p>
-                    <div className="mxh mt-3">
-                        <Button variant="contained" color="primary" className="text-capitalize mb-3">
-                            <i className="fab fa-facebook-f mr-4"></i> Facebook
-                        </Button>
-                        <Button variant="contained" color="primary" className="text-capitalize float-right mb-3 twitter">
-                            <i className="fab fa-twitter mr-4"></i> Twitter
-                        </Button>
-                        <Button variant="contained" color="primary" className="text-capitalize mb-3 google">
-                            <i className="fab fa-google mr-4"></i> Google
-                        </Button>
-                        <Button variant="contained" color="primary" className="text-capitalize instagram float-right mb-3">
-                            <i className="fab fa-instagram mr-4"></i> Instagram
-                        </Button>
-                    </div>
+                   
                 </div>
             </div>
         </Router>

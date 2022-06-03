@@ -18,9 +18,6 @@ const ModalFlight = (props) => {
     date: "",
     loadlaihoadon: 1,
   });
-  const showModal = async () => {
-    setIsModalVisible(true);
-  };
 
   const handleOk = () => {
     setIsModalVisible(false);
