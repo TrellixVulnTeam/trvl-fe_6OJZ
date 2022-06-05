@@ -5,7 +5,7 @@ import Select from 'react-select'
 import { Link } from "react-router-dom";
 import Footer from "../trangchu/footer/Footer";
 import "./Ticket.css";
-import TableTicket from "./TableTicket";
+
 import Flight from "./Flight/Flight";
 
 const destination = [

@@ -60,7 +60,7 @@ function Loaitour(props) {
                     <Link to={`${match.url}/themloaitour`}><Button variant="outlined" color="secondary"><i className="fas fa-plus"></i>&nbsp;&nbsp; Thêm mới</Button></Link>
                 </div>
                 {loading ? <div className="spin"><Spin className="mt-5" /></div> :
-                    <Table columns={columns} dataSource={loaitours.map((ok, index) => (
+                    <Table bordered columns={columns} dataSource={loaitours.map((ok, index) => (
                         {
                             key: index + 1,
                             name: <span>{ok.name}</span>,
