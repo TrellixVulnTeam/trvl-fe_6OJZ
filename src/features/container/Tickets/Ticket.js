@@ -5,7 +5,7 @@ import Select from 'react-select'
 import { Link } from "react-router-dom";
 import Footer from "../trangchu/footer/Footer";
 import "./Ticket.css";
-import TableTicket from "./TableTicket";
+
 import Flight from "./Flight/Flight";
 import axios from 'axios';
 import axiosClient from "../../../api/axiosClient";
@@ -62,7 +62,14 @@ function Ticket() {
 
 
       //Call API
-      const result = await axiosClient.post('/search', {
+      /**
+       * @params
+       * from_id (required): id dia diem khoi hanh
+       * to_id (required): id dia diem den
+       * start_date (required): thoi gian bat dau (DD/MM/YYYY)
+       * to_date (optionals): thoi gian quay ve (khu hoi - DD/MM/YYYY)
+       */
+      const result = await axiosClient.post('/ticket/search', {
         "from_id": -1,
         "to_id": -1,
         "start_date": "DD/MM/YYYY",

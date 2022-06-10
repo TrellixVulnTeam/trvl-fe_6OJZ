@@ -45,6 +45,11 @@ import Themchiphi from "../Chiphi/Themchiphi";
 import Hoadoncanhan from "../Hoadoncanhan/Hoadoncanhan";
 import Kiemduyet from "../Kiemduyet/Kiemduyet";
 import { hoadoncanhanData } from "../Hoadoncanhan/hoadoncanhanSlice";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { MdFlight } from "react-icons/md";
+import Plane from "../PlaneTicket/Plane/Plane";
+import Flight from "../PlaneTicket/Flight/Flight";
+
 
 export default function Nav() {
   const match = useRouteMatch();
@@ -288,9 +293,16 @@ export default function Nav() {
       <Route exact path={`${match.path}/quocgia`}>
         <Quocgia url={match.url} />
       </Route>
+      <Route exact path={`${match.path}/themmaybay`}>
+        <Plane url={match.url} />
+      </Route>
+      <Route exact path={`${match.path}/themchuyenbay`}>
+        <Flight url={match.url} />
+      </Route>
       <Route exact path={`${match.path}/loaitour`}>
         <Loaitour url={match.url} />
       </Route>
+
       <Route exact path={`${match.path}/taikhoan`}>
         <Taikhoan url={match.url} />
       </Route>
@@ -309,11 +321,20 @@ export default function Nav() {
       <Route path={`${match.path}/tour/themtour`}>
         <Themtour />
       </Route>
+      {/* <Route path={`${match.path}/themmaybay`}>
+        <CardAddPlane />
+      </Route> */}
       <Route path={`${match.path}/tour/suatour/:id`}>
         <Themtour />
       </Route>
       <Route path={`${match.path}/mangxahoi/themmangxahoi`}>
         <Themmangxahoi />
+      </Route>
+      <Route path={`${match.path}/maybay`}>
+        <Plane />
+      </Route>
+      <Route path={`${match.path}/chuyenbay`}>
+        <Flight />
       </Route>
     </div>
   );
@@ -488,6 +509,24 @@ export default function Nav() {
         }
       >
         <Link to={`${match.url}/tour`}>Quản lý tour</Link>
+      </Menu.Item>
+      <Menu.Item
+        key="22"
+        icon={
+          state.collapsed === true ? (
+            <GiCommercialAirplane />
+          ) : (
+            <GiCommercialAirplane />
+          )
+        }
+      >
+        <Link to={`${match.url}/maybay`}>Quản lý máy bay</Link>
+      </Menu.Item>
+      <Menu.Item
+        key="23"
+        icon={state.collapsed === true ? <MdFlight /> : <MdFlight />}
+      >
+        <Link to={`${match.url}/chuyenbay`}>Quản lý chuyến bay</Link>
       </Menu.Item>
       <Menu.Item
         key="3"
