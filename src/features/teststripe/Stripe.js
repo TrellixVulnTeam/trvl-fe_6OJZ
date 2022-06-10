@@ -24,7 +24,7 @@ function Stripe(props) {
         //     setusd(data.data.USD_VND)
         // })
         if (infor) {
-            Axios.get(`http://localhost:666/users/${infor.id}`).then(data => {
+            Axios.get(`http://localhost:8000/users/${infor.id}`).then(data => {
                 setemail(data.data.data.email);
             });
         }

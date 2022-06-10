@@ -50,7 +50,7 @@ export default function CheckoutForm(props) {
     } else {
       if (result.paymentIntent.status === "succeeded") {
         console.log("thanh cong");
-        Axios.post("http://localhost:666/sendemail/", {
+        Axios.post("http://localhost:8000/sendemail/", {
           thanhtien: thanhtien,
           email: email,
           tentour: tentour,

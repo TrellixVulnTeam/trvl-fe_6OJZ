@@ -25,7 +25,7 @@ function Themtintuc(props) {
         actionResult();
         actiontintuctag();
         if (id) {
-            const suatag = await axios.get(`http://localhost:666/tintuctags/${id}`);
+            const suatag = await axios.get(`http://localhost:8000/tintuctags/${id}`);
             const ss = suatag.data
             const sua_tag = [];
             for (let i = 0; i < ss.data.length; i++) {

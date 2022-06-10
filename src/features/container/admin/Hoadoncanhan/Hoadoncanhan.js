@@ -33,7 +33,7 @@ function Hoadoncanhan() {
     const [user, setuser] = useState("")
     const actionResult = async () => { await dispatch(hoadoncanhanData()) }
     useEffect(() => {
-        Axios.get("http://localhost:666/users/1").then(data => {
+        Axios.get("http://localhost:8000/users/1").then(data => {
             setuser(data.data.USD_VND)
         })
         actionResult();
