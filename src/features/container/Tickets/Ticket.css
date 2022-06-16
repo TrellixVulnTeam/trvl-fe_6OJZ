@@ -1,13 +1,15 @@
 .form-search{
-
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 40px;
+    background-color: rgb(253, 215, 166, .4);;
 }
 
 .choose-destination{
     display: flex;
     justify-content: space-between;
-    border: 1px solid #ccc;
-    padding: 40px;
-    background: #fdd7a6;
+  
+    /* padding: 40px;
+    background: #fdd7a6; */
 
 }
 
@@ -15,3 +17,17 @@
     width: 320px;
     margin-right: 20px;
 }
+
+/* .form-search {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 40px;
+}
+
+.choose-destination {
+    display: flex;
+    
+}
+.choose-time{
+    display: flex;
+    margin-top: 20px;
+} */

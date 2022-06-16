@@ -472,7 +472,7 @@ export default function Nav() {
       >
         <Link to="/admin">Doanh thu</Link>
       </Menu.Item>
-      {/* <Menu.Item
+      <Menu.Item
         key="19"
         icon={
           state.collapsed === true ? (
@@ -483,7 +483,7 @@ export default function Nav() {
         }
       >
         <Link to={`${match.url}/chiphi`}>Chi phí</Link>
-      </Menu.Item> */}
+      </Menu.Item>
       <Menu.Item
         key="21"
         icon={
@@ -648,7 +648,7 @@ export default function Nav() {
       >
         <Link to={`${match.url}/dichvu`}>Quản lý dịch vụ</Link>
       </Menu.Item>
-      {/* <Menu.Item
+      <Menu.Item
         key="13"
         icon={
           state.collapsed === true ? (
@@ -659,8 +659,8 @@ export default function Nav() {
         }
       >
         <Link to={`${match.url}/hoadon`}>Quản lý hoá đơn</Link>
-      </Menu.Item> */}
-      {/* <Menu.Item
+      </Menu.Item>
+      <Menu.Item
         key="20"
         icon={
           state.collapsed === true ? (
@@ -671,7 +671,7 @@ export default function Nav() {
         }
       >
         <Link to={`${match.url}/hoadoncanhan`}>Hoá đơn tạo tour</Link>
-      </Menu.Item> */}
+      </Menu.Item>
       <Menu.Item
         key="14"
         icon={

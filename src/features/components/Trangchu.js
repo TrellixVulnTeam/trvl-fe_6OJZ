@@ -10,17 +10,20 @@ import Dichvu from "../container/trangchu/dichvu/Dichvu";
 import Footer from "../container/trangchu/footer/Footer";
 import CreateTour from "../container/trangchu/createTour/CreateTour";
 import Ticket from "../container/Tickets/Ticket";
+import { Grid, Box } from "@mui/material";
+import { Col, Row } from "antd";
 export class Trangchu extends Component {
   render() {
     return (
       <div>
-        <Banner />
-        <Camnangdulich />
-        <CreateTour />
-        <Tourtrongnuoc />
-        <Tournuocngoai />
-        <Dichvu />
+        <Banner /><br/>
+        <Camnangdulich /><br/>
+        <CreateTour /><br/>
+        <Tourtrongnuoc /><br/>
+        <Tournuocngoai /><br/>
+        <Dichvu /><br/>
         <Tintuc />
+        <br />
         <Ykienkhachhang />
         <Footer />
       </div>

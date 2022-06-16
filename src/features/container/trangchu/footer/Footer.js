@@ -78,12 +78,12 @@ function Footer(props) {
                   Khuyến mãi
                </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="#">
                     <span className="fa fa-angle-double-right mr-2"></span>
                   Vé máy bay
                </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="col-md-3 mb-md-0 mb-3 mxh ">
