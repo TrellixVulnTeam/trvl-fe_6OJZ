@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Link as Linkrt, useHistory } from "react-router-dom";
 import "./menu.css";
+import { SiYourtraveldottv } from "react-icons/si";
 import Avatar from "antd/lib/avatar/avatar";
 import logo from "./../../../images/logoTravel.png";
 import { Menu, Dropdown, Drawer, message, Badge } from "antd";
@@ -32,7 +33,7 @@ function ListMenu(props) {
     tenanh: "",
     img: "",
   });
-  const hangdelimage = (e) => {
+  const handelImage = (e) => {
     setState({
       ...state,
       linkImg: URL.createObjectURL(e.target.files[0]),
@@ -303,7 +304,7 @@ function ListMenu(props) {
     <div id="menu">
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <Linkrt className="navbar-brand" to="/">
-          <img src={logo} alt="" />
+          Travel <SiYourtraveldottv />
         </Linkrt>
         <button
           className="navbar-toggler d-lg-none"
@@ -321,7 +322,7 @@ function ListMenu(props) {
             <li className="nav-item ">
               <Link
                 className="nav-link"
-                activeClass="active"
+                activeclassName="active"
                 to="banner"
                 spy={true}
                 smooth={true}
@@ -334,7 +335,7 @@ function ListMenu(props) {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                activeClass="active"
+                activeclassName="active"
                 to="tour"
                 spy={true}
                 smooth={true}
@@ -344,10 +345,10 @@ function ListMenu(props) {
                 Tour du lịch
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Linkrt
                 className="nav-link"
-                activeClass="active"
+                activeclassName="active"
                 to="/hotels"
                 spy={true}
                 smooth={true}
@@ -356,11 +357,11 @@ function ListMenu(props) {
               >
                 Khách sạn
               </Linkrt>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link
                 className="nav-link"
-                activeClass="active"
+                activeclassName="active"
                 to="dichvu"
                 spy={true}
                 smooth={true}
@@ -373,7 +374,7 @@ function ListMenu(props) {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                activeClass="active"
+                activeclassName="active"
                 to="news"
                 spy={true}
                 smooth={true}
@@ -383,10 +384,10 @@ function ListMenu(props) {
                 Tin tức
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Linkrt
                 className="nav-link"
-                activeClass="active"
+                activeclassName="active"
                 to="/ticket"
                 spy={true}
                 smooth={true}
@@ -395,7 +396,7 @@ function ListMenu(props) {
               >
                Vé máy bay
               </Linkrt>
-            </li>
+            </li> */}
             <li className="nav-item mr-3">
               <Dropdown overlay={ss} trigger={["click"]}>
                 <span className="nav-link">
@@ -418,11 +419,11 @@ function ListMenu(props) {
           <Dropdown overlay={sss} trigger={["click"]}>
             {checkthongbao === 0 ? (
               <Badge>
-                <i class="fas fa-bell"></i>
+                <i className="fas fa-bell"></i>
               </Badge>
             ) : (
               <Badge dot>
-                <i class="fas fa-bell"></i>
+                <i className="fas fa-bell"></i>
               </Badge>
             )}
           </Dropdown>
@@ -517,7 +518,7 @@ function ListMenu(props) {
       >
         <form action="" method="post" onSubmit={onSubmit}>
           <div className="form-group">
-            <label htmlFor="">Tên người dùng</label>
+            <label htmlFor="">Họ và tên</label>
             <input
               type="text"
               name="name"
@@ -529,13 +530,13 @@ function ListMenu(props) {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="">Thêm poster</label>
+            <label htmlFor="">Thêm ảnh</label>
             <div>
               <input
                 accept="image/*"
                 id="icon-button-file"
                 type="file"
-                onChange={hangdelimage}
+                onChange={handelImage}
               />
               <label htmlFor="icon-button-file">
                 <IconButton

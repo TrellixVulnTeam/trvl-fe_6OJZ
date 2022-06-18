@@ -47,7 +47,7 @@ import Hotel from "../container/hotels/Hotel";
 import DetailHotel from "../container/hotels/DetailHotel";
 import Contact from "../container/hotels/Contact";
 import Ticket from "../container/Tickets/Ticket";
-import ModalFlight from "../container/Tickets/Flight/ModalFlight";
+import ModalFlight from '../../features/container/Tickets/ModalFlight'
 
 export default function NestingExample() {
   const dispatch = useDispatch();

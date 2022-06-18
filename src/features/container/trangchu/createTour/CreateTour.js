@@ -14,6 +14,8 @@ function CreateTour(props) {
                     </p>
                 </div>
                 <div className="container">
+                    {/* <img src='https://baominhsaigon.net/storage/pagedata/100074/img/upload/dichvu/halong.jpg'/> */}
+
                     <Link to="/create-tour"><img src={anh} className="w-100" alt="" /></Link>
                 </div>
             </div>

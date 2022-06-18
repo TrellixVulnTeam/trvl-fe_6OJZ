@@ -9,7 +9,7 @@ import { Button, IconButton } from "@material-ui/core";
 import { storage } from "../../../../firebase";
 import { inforData } from "../../login/inforSlice";
 import taikhoanApi from "../../../../api/taikhoanApi";
-
+import {SiYourtraveldottv} from 'react-icons/si'
 function ListMenu(props) {
   const [avatar, setAvatar] = useState("");
   const [state, setState] = useState({
@@ -27,7 +27,7 @@ function ListMenu(props) {
     tenanh: "",
     img: "",
   });
-  const hangdelimage = (e) => {
+  const handleImage = (e) => {
     setState({
       ...state,
       linkImg: URL.createObjectURL(e.target.files[0]),
@@ -224,7 +224,7 @@ function ListMenu(props) {
       }
     }
   };
-  const hangdleGioitinh = (e) => {
+  const handleSex = (e) => {
     setState({
       ...state,
       gioitinh: e.target.value,
@@ -246,7 +246,7 @@ function ListMenu(props) {
       <div className="background ">
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
           <Linkrt className="navbar-brand" to="/">
-            <img src={logo} alt="" />
+          Travel <SiYourtraveldottv/>
           </Linkrt>
           <button
             className="navbar-toggler d-lg-none"
@@ -275,13 +275,13 @@ function ListMenu(props) {
                   </Linkrt>
                 </div>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <div className="border-bot-menu">
                   <Linkrt className="nav-link" to="/hotels">
                     Khách sạn
                   </Linkrt>
                 </div>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <div className="border-bot-menu">
                   <Linkrt className="nav-link">Dịch vụ</Linkrt>
@@ -417,13 +417,13 @@ function ListMenu(props) {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="">Thêm poster</label>
+              <label htmlFor="">Thêm ảnh</label>
               <div>
                 <input
                   accept="image/*"
                   id="icon-button-file"
                   type="file"
-                  onChange={hangdelimage}
+                  onChange={handleImage}
                 />
                 <label htmlFor="icon-button-file">
                   <IconButton
@@ -452,7 +452,7 @@ function ListMenu(props) {
             </div>
             <div className="form-group">
               <label htmlFor="">Giới tính</label>
-              <select className="form-control" onChange={hangdleGioitinh}>
+              <select className="form-control" onChange={handleSex}>
                 <option value="1">nam</option>
                 <option value="0">Nữ</option>
               </select>

@@ -1,12 +1,21 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+
+#menu nav{
+  height: 100px;
+  padding: 0 24px;
+}
 #menu .logo {
   width: 4rem;
 }
 #menu .navbar-brand{
-  font-family: 'Galada', cursive;
+  font-family: 'Open Sans', sans-serif;
   color: #0ac054 !important;
-  /* text-shadow: 2px 2px 2px gray; */
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px gray;
 }
 #menu nav {
   font-size: 1rem;
@@ -14,7 +23,7 @@
 }
 
 #menu nav li{
-  margin-right: 10px;
+  margin-right: 24px;
   text-transform: uppercase;
 }
 #menu .nav-link.active {

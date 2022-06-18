@@ -1,17 +1,78 @@
 import React, { useEffect, useState } from "react";
 import { DatePicker, Space, Button, List } from 'antd';
-
+import { Modal,Table } from "antd";
 import Select from 'react-select'
 import { Link } from "react-router-dom";
 import Footer from "../trangchu/footer/Footer";
 import "./Ticket.css";
-
-import Flight from "./Flight/Flight";
+import ModalFlight from "./ModalFlight";
 import axios from 'axios';
 import axiosClient from "../../../api/axiosClient";
 import moment from "moment";
 
 //RangePicker Doc: https://ant.design/components/date-picker/#RangePicker
+<<<<<<< HEAD
+
+const dataSource = [
+  {
+    key: 1,
+    logo: (
+      <img
+        src="https://static.wixstatic.com/media/9d8ed5_a3d60d721cfc4d0fac1d5b4919d1e035~mv2.jpg/v1/fill/w_1000,h_626,al_c,q_90,usm_0.66_1.00_0.01/9d8ed5_a3d60d721cfc4d0fac1d5b4919d1e035~mv2.jpg"
+        alt="logo-brand"
+        width="80px"
+      />
+    ),
+    brand: "VietNam Airline",
+    flight: "VNU123",
+    time: "09:10 - 11:25",
+    price: '1.500.000',
+  },
+  {
+    key: 2,
+    logo: (
+      <img
+        src="https://inkythuatso.com/uploads/images/2021/09/logo-bamboo-airways-inkythuatso-13-16-26-24.jpg"
+        alt="logo-brand"
+        width="80px"
+      />
+    ),
+    brand: "BamBoo",
+    flight: "BB210",
+    time: "09:10 - 11:25",
+    price: '3.200.000',
+  },
+  {
+    key: 3,
+    logo: (
+      <img
+        src="https://static.wixstatic.com/media/9d8ed5_ed0de8277dc44e17a5cb83189ed732f1~mv2.png/v1/fill/w_1339,h_837,al_c/9d8ed5_ed0de8277dc44e17a5cb83189ed732f1~mv2.png"
+        alt="logo-brand"
+        width="80px"
+      />
+    ),
+    brand: "VietJet",
+    flight: "VJU123",
+    time: "09:10 - 11:25",
+    price: '1.250.000',
+  },
+  {
+    key: 4,
+    logo: (
+      <img
+        src="https://download.logo.wine/logo/Jetstar_Airways/Jetstar_Airways-Logo.wine.png"
+        alt="logo-brand"
+        width="80px"
+      />
+    ),
+    brand: "JetStart",
+    flight: "VNU123",
+    time: "09:10 - 11:25",
+    price: '2.200.000',
+  },
+];
+=======
+>>>>>>> dc46958e9039967fa22fd77b6a88592cdce79570
 
 const { RangePicker } = DatePicker;
 function Ticket() {
@@ -20,7 +81,88 @@ function Ticket() {
     const [fromLocation, setFromLocation] = useState(null);
     const [toLocation, setToLocation] = useState(null);
     const [dateRange, setDateRange] = useState([null, null]);
+<<<<<<< HEAD
+    const [showResult, setShowResult] = useState(true)
+    const [dataTable, setdataTable] = useState([])
+    const [isSubmit, setIsSubmit] = useState(false);
+    const columns = [
+      {
+        title: "",
+        dataIndex: "logo",
+        key: "logo",
+        with: "8%",
+      },
+      {
+        title: "Brand",
+        dataIndex: "brand",
+        key: "brand",
+        width: "20%",
+        filters: [
+          {
+            text: "VietNam Airline",
+            value: "VietNam Airline",
+          },
+          {
+            text: "BamBoo",
+            value: "BamBoo",
+          },
+          {
+            text: "JetStar",
+            value: "JetStar",
+          },
+          {
+            text: "VietJet",
+            value: "VietJet",
+          },
+        ],
+        onFilter: (value, record) => record.brand.indexOf(value) === 0,
+      },
+      {
+        title: "Chuyến bay",
+        dataIndex: "flight",
+        key: "flight",
+      },
+      {
+        title: "Thời gian",
+        dataIndex: "time",
+        key: "time",
+      },
+      {
+        title: "Giá",
+        dataIndex: "price",
+        key: "price",
+        sorter: (a, b) => a.price - b.price,
+      },
+      {
+        title: "",
+        key: "action",
+        render: () => (
+          <Button
+            onClick={() => {
+              setIsModalVisible(true);
+            }}
+          >
+            Đặt vé
+          </Button>
+        ),
+      },
+    ];
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+=======
     
+>>>>>>> dc46958e9039967fa22fd77b6a88592cdce79570
     const GetAllLocation = async () => {
       const result = await axiosClient.get('/diadiems');
       let ListLocation = [];
@@ -112,15 +254,23 @@ function Ticket() {
         <div className="form-search">
             <div className='choose-destination'>
                 <div className="choose">
+<<<<<<< HEAD
+                    <label style={{fontSize: '16px'}}>Chọn nơi khởi hành</label>
+                    <Select value={fromLocation} onChange={ChangeFromLocation} placeholder='Chọn điểm đi...' options={destination}/>
+                </div>
+                <div className="choose">
+                    <label style={{fontSize: '16px'}}>Chọn nơi đến</label>
+=======
                     <label style={{fontSize: '16px', textTransform: 'uppercase'}}>Chọn điểm đi</label>
                     <Select value={fromLocation} onChange={ChangeFromLocation} placeholder='Chọn điểm đi...' options={destination}/>
                 </div>
                 <div className="choose">
                     <label style={{fontSize: '16px', textTransform: 'uppercase'}}>Chọn điểm đến</label>
+>>>>>>> dc46958e9039967fa22fd77b6a88592cdce79570
                     <Select value={toLocation} onChange={ChangeToLocation} placeholder='Chọn điểm đến...' options={destination}/>
                 </div>
                 <div className='choose'>
-                    <label style={{fontSize: '16px', textTransform: 'uppercase'}}>Chọn ngày</label>
+                    <label style={{fontSize: '16px'}}>Chọn ngày</label>
                     <Space direction="vertical" size={14} >
                         <RangePicker value={dateRange} onCalendarChange={ChangeDate} style={{width:'320px', height: '39px', borderRadius: '1px'}}/>
                     </Space>
@@ -128,7 +278,22 @@ function Ticket() {
                 <Button style={{marginTop:'33px', height:'39px', background:'#ee6c18', color: '#fff', width:'150px', textTransform:'uppercase'}} onClick={SearchTicket}>Search...</Button>
             </div>
         </div>
-        <Flight/>
+        <div className="wrapper">
+        <h5>Kết quả tìm kiếm</h5>
+        <Table columns={columns} dataSource={dataSource} />
+      </div>
+
+      {isModalVisible && (
+        <ModalFlight
+          isModalVisible={isModalVisible}
+          handleOk={() => {
+            setIsModalVisible(false);
+          }}
+          handleCancel={() => {
+            setIsModalVisible(false);
+          }}
+        />
+      )}
       </div>
       <Footer />
     </div>
